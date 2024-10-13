@@ -1,0 +1,27 @@
+.main-header {
+    position: relative;
+    max-height: 100px;
+    margin-bottom: 60px;
+}
+
+.main-sidebar {
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  width: 250px; /* Adjust based on sidebar width */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it is above other content */
+}
+.main-sidebar.collapsed {
+  transform: translateX(-250px); /* Adjust based on sidebar width */
+}
+
+body {
+  margin-left: 250px; /* Adjust based on sidebar width */
+  transition: margin-left 0.3s ease;
+}
+body.sidebar-collapsed {
+  margin-left: 0;
+}
